@@ -216,10 +216,9 @@ async function bootstrap () {
 
    
     bot.command('help', async (ctx) => {
-        ctx.reply(`Заберите нашу Вам благодарность`,{
-            reply_markup: new InlineKeyboard().url('Чек на 0.1 TON', 'http://t.me/CryptoBot?start=CQKinLPQRQov')
-            .text('Получить ссылку', 'link')
-        })
+        ctx.reply(`При подписке через данного бота на канал ${channel_name} Вы получите чек на монету TON, так же этот бот может выдать 
+        Вам реферальную ссылку для приглашения друзей и знакомых, за каждого подписавшегося на канал Вам отправляется чек на монеты TON, 
+        и подписавшийся так же получает чек!`)
     })
 
     bot.callbackQuery('link', async (ctx) => {
